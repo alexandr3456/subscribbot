@@ -20,9 +20,9 @@ from aiogram.enums import ParseMode
 load_dotenv()
 
 BOT_TOKEN = os.getenv("BOT_TOKEN", "").strip()
-CHANNEL_ID = os.getenv("CHANNEL_ID", "").strip()
-CHANNEL_URL = os.getenv("CHANNEL_URL", "").strip()
-MANUAL_URL = os.getenv("MANUAL_URL", "").strip()
+CHANNEL_ID = os.getenv("CHANNEL_ID", "").strip().lstrip("=").strip()
+CHANNEL_URL = os.getenv("CHANNEL_URL", "").strip().lstrip("=").strip()
+MANUAL_URL = os.getenv("MANUAL_URL", "").strip().lstrip("=").strip()
 
 logging.basicConfig(
     level=logging.INFO,
